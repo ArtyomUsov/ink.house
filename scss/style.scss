@@ -1,0 +1,18 @@
+$body-background-color: black;
+$color-white: white;
+$color-green: #3cc74e;
+$color-blue: #609bff;
+$color-purple: #5221e6;
+$color-pink: #e95d90;
+$color-light-grey: #8491a0;
+$color-dark-grey: #5b6876;
+$color-level-1: #181823;
+$row-padding: calc(20px + 52 * ((100vw - 360px) / (1440 - 360)));
+$mb-padding: 12px 20px;
+$px-24: 24px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
