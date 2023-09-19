@@ -25,6 +25,9 @@ header div.logo {
   gap: 8px;
   color: #598d66;
 }
+header div.logo h2 {
+  font-weight: 700;
+}
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,4 +54,16 @@ header nav button img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+header nav button:focus {
+  background: white;
+}
+header nav button:focus a {
+  color: #2C2D35;
+}
+header nav button:hover {
+  background: white;
+}
+header nav button:hover a {
+  color: #598D66;
 }

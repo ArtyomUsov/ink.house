@@ -16,6 +16,7 @@ header {
     color: #598d66;
 
     h2 {
+      font-weight: 700;
     }
   }
   nav {
@@ -35,6 +36,19 @@ header {
         padding: 1px;
         justify-content: center;
         align-items: center;
+      }
+    }
+    button:focus {
+      background: white;
+      a {
+        color: #2C2D35;
+      }
+    }
+    button:hover {
+      background: white;
+
+      a {
+        color: #598D66;
       }
     }
   }
