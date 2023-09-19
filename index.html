@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ink. House</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/title-screen.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/call-to-action.css" />
+    <link rel="stylesheet" href="css/our-team.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="fonts/raleway.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -41,16 +53,17 @@
           <a href="">Продукция</a>
         </button>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="contentBlock">
         <div class="gallery__navigation">
           <h3 class="gallery__navigation_title">Репродукции</h3>
           <div class="gallery__navigation_bar">
-            <button>Франция</button>
-            <button>Германия</button>
-            <button>Англия</button>
+            <button onclick="showContent('content1')">Франция</button>
+            <button onclick="showContent('content2')">Германия</button>
+            <button onclick="showContent('content3')">Англия</button>
           </div>
         </div>
-        <div class="gallery__items">
+        <!-- content France -->
+        <div class="gallery__items" id="content1">
           <div class="gallery__items__item">
             <img
               class="gallery__items__item__img"
@@ -136,8 +149,179 @@
             <button>В корзину</button>
           </div>
         </div>
+        <!-- content Germany -->
+        <div class="gallery__items" id="content2">
+          <div class="gallery__items__item">
+            <img class="gallery__items__item__img" src="img/Above the city.png" alt="Above the city" />
+            <p class="gallery__items__item__autor">Курт Вернер</p>
+            <h4 class="gallery__items__item__name">Над городом</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60) 
+            </p>
+            <p class="gallery__items__item__price">16 000 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img class="gallery__items__item__img" src="img/Chicks.png" alt="Chicks" />
+            <p class="gallery__items__item__autor">Макс Рихтер</p>
+            <h4 class="gallery__items__item__name">Птенцы</h4>
+            <p class="gallery__items__item__description">
+              Холст, масло (50х80) 
+            </p>
+            <p class="gallery__items__item__price">14 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Among the leaves.png"
+              alt="Among the leaves"
+            />
+            <p class="gallery__items__item__autor">Мартин Майер</p>
+            <h4 class="gallery__items__item__name">Среди листьев</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60) 
+            </p>
+            <p class="gallery__items__item__price">20 000 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Bright bird.png"
+              alt="Bright bird"
+            />
+            <p class="gallery__items__item__autor">Герман Беккер</p>
+            <h4 class="gallery__items__item__name">Яркая птица</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60) 
+            </p>
+            <p class="gallery__items__item__price">13 000 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Woodpeckers.png"
+              alt="Woodpeckers"
+            />
+            <p class="gallery__items__item__autor">Вульф Бауэр</p>
+            <h4 class="gallery__items__item__name">Дятлы</h4>
+            <p class="gallery__items__item__description">
+              Бумага, акрил (50х80) 
+            </p>
+            <p class="gallery__items__item__price">20 000 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Big waters.png"
+              alt="Big waters"
+            />
+            <p class="gallery__items__item__autor">Вальтер Хартманн</p>
+            <h4 class="gallery__items__item__name">Большие воды</h4>
+            <p class="gallery__items__item__description">
+              Бумага, акрил (50х80) 
+            </p>
+            <p class="gallery__items__item__price">23 000 руб</p>
+            <button>В корзину</button>
+          </div>
+        </div>
+        <!-- content England -->
+        <div class="gallery__items" id="content3">
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Wild animal.png"
+              alt="Wild animal"
+            />
+            <p class="gallery__items__item__autor">Пол Смит</p>
+            <h4 class="gallery__items__item__name">Дикий зверь</h4>
+            <p class="gallery__items__item__description">
+              Акварель, бумага (50х80) 
+            </p>
+            <p class="gallery__items__item__price">19 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Rocky coast.png"
+              alt="Rocky coast"
+            />
+            <p class="gallery__items__item__autor">Джон Уайт</p>
+            <h4 class="gallery__items__item__name">Скалистый берег</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60) 
+            </p>
+            <p class="gallery__items__item__price">17 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/River and mountains.png"
+              alt="River and mountains"
+            />
+            <p class="gallery__items__item__autor">Джим Уотсон</p>
+            <h4 class="gallery__items__item__name">Река и горы</h4>
+            <p class="gallery__items__item__description">
+              Акварель, бумага (50х80) 
+            </p>
+            <p class="gallery__items__item__price">20 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/White parrot.png"
+              alt="White parrot"
+            />
+            <p class="gallery__items__item__autor">Юджин Зиллион</p>
+            <h4 class="gallery__items__item__name">Белый попугай</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60)  
+            </p>
+            <p class="gallery__items__item__price">15 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Night fish.png"
+              alt="Night fish"
+            />
+            <p class="gallery__items__item__autor">Эрик Гиллман</p>
+            <h4 class="gallery__items__item__name">Ночная рыба</h4>
+            <p class="gallery__items__item__description">
+              Бумага, акрил (50х80) 
+            </p>
+            <p class="gallery__items__item__price">12 500 руб</p>
+            <button>В корзину</button>
+          </div>
+          <div class="gallery__items__item">
+            <img
+              class="gallery__items__item__img"
+              src="img/Ginger cat.png"
+              alt="Ginger cat"
+            />
+            <p class="gallery__items__item__autor">Альфред Барр</p>
+            <h4 class="gallery__items__item__name">Рыжий кот</h4>
+            <p class="gallery__items__item__description">
+              Цветная литография (40х60)
+            </p>
+            <p class="gallery__items__item__price">21 000 руб</p>
+            <button>В корзину</button>
+          </div>
+        </div>
       </section>
       <section class="call-to-action">
+        <img
+          class="call-to-action__background"
+          src="img/Rectangle.png"
+          alt=""
+        />
         <img src="icons/logo-yellow.png" alt="logo-yellow" />
         <h3 class="call-to-action__title">
           Новая коллекция французских авторов
