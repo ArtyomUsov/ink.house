@@ -1,6 +1,12 @@
-
-div.gallery__items {
+.gallery__navigation {
+  display: block;
+}
+.gallery__items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
   }
+  #content2,
+#content3 {
+  display: none;
+}

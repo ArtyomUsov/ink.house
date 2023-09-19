@@ -1,0 +1,41 @@
+header {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  padding: 33px 165px 32px 165px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  background: #e1ede6;
+
+  div.logo {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    gap: 8px;
+    color: #598d66;
+
+    h2 {
+    }
+  }
+  nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+
+    button {
+      a {
+        color: #2c2d35;
+        font-weight: 500;
+      }
+      img {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        padding: 1px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
