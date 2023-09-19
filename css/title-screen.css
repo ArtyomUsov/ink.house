@@ -29,3 +29,12 @@
 .title-screen .title-screen__title-content button a {
   color: #598d66;
 }
+.title-screen .title-screen__title-content button:focus {
+  background: #d4e8d9;
+}
+.title-screen .title-screen__title-content button:hover {
+  background: #598d66;
+}
+.title-screen .title-screen__title-content button:hover a {
+  color: #f4f6f5;
+}

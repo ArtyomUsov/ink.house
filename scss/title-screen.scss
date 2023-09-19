@@ -29,5 +29,15 @@ $color-green: #598d66;
         color: $color-green;
       }
     }
+    button:focus {
+      background: #d4e8d9;
+    }
+    button:hover {
+      background: #598d66;
+
+      a {
+        color: #f4f6f5;
+      }
+    }
   }
 }
