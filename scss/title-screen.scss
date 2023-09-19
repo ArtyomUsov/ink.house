@@ -1,0 +1,33 @@
+$color-green: #598d66;
+
+.title-screen {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+  align-items: center;
+
+  .title-screen__title-content {
+    h1,
+    .green-title {
+      font-size: 60px;
+      line-height: 110%; /* 66px */
+      span {
+        color: $color-green;
+      }
+    }
+    p {
+      color: #86928b;
+      font-size: 18px;
+      line-height: 150%;
+      padding: 20px 0 60px;
+    }
+    button {
+      border: 1px solid $color-green;
+      padding: 20px 60px;
+
+      a {
+        color: $color-green;
+      }
+    }
+  }
+}
