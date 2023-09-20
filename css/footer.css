@@ -1,3 +1,59 @@
-
-
-/*# sourceMappingURL=footer.css.map */
+footer {
+  padding: 29px 165px 23px;
+  background: #e1ede6;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer div > h3 {
+  color: #2c2d35;
+  font-size: 20px;
+}
+footer div > a {
+  color: #86928b;
+  font-size: 18px;
+  padding-top: 6px;
+  line-height: 150%;
+  /* 27px */
+  display: block;
+}
+footer div > p {
+  color: #86928b;
+  font-size: 12px;
+  padding-top: 6px;
+  line-height: 120%;
+  /* 14.4px */
+}
+footer .row .row__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  color: #598d66;
+  margin-bottom: 35px;
+}
+footer .row .row__logo h2 {
+  font-weight: 700;
+}
+footer .row .row__messenger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+footer .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
