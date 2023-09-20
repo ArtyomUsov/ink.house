@@ -1,6 +1,43 @@
 section.call-to-action {
-  img.call-to-action__background {
-    position: relative;
-    left: -165px;
+  position: relative;
+
+  .call-to-action__background {
+    object-fit: cover;
+    mix-blend-mode: hard-light;
+    opacity: 0.7;
+  }
+  .call-to-action__content {
+    position: absolute;
+    top: 0;
+    padding: 70px 735px 70px 165px;
+    color: #f4f6f5;
+    // background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 80%);
+
+    img {
+      position: absolute;
+    }
+    .call-to-action__title {
+      font-size: 40px;
+      line-height: 100%; /* 40px */
+      padding-left: 100px;
+    }
+    p {
+      padding: 20px 0 60px;
+      font-size: 18px;
+      line-height: 150%; /* 27px */
+    }
+    button {
+      padding: 20px 60px;
+      background: #eedb6d;
+      color: #2c2d35;
+    }
+    button:focus {
+      border: 1px solid #a38314;
+      background: #faeb97;
+    }
+    button:hover {
+      background: #faeb97;
+    }
   }
 }

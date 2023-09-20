@@ -1,3 +1,38 @@
-
-
-/*# sourceMappingURL=our-team.css.map */
+.our-team {
+  padding: 149px 165px 70px;
+  background-color: #F4F6F5;
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.our-team .our-team__applique {
+  position: relative;
+}
+.our-team .our-team__applique .our-team__applique__frame {
+  position: relative;
+}
+.our-team .our-team__applique .our-team__applique__handle {
+  position: absolute;
+  left: 48px;
+  bottom: 48px;
+}
+.our-team .our-team__cotent h3 {
+  font-size: 40px;
+  line-height: 110%;
+  /* 44px */
+}
+.our-team .our-team__cotent p {
+  font-size: 18px;
+  line-height: 150%;
+  /* 27px */
+  padding: 20px 0;
+}
+.our-team .our-team__cotent .our-team__cotent__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}

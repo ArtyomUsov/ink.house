@@ -1,0 +1,43 @@
+.our-team {
+  padding: 149px 165px 70px;
+  background-color: #F4F6F5;
+  // position: relative;
+  // display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: center;
+
+  .our-team__applique {
+    position: relative;
+
+    .our-team__applique__frame {
+      position: relative;
+      //   top: 79px;
+      // bottom: 0;
+    }
+    .our-team__applique__handle {
+      position: absolute;
+      //   position: relative;
+    //   padding-top: 70px;
+      left: 48px;
+      bottom: 48px;
+    // top: 79px;
+    }
+  }
+  .our-team__cotent {
+    h3 {
+      font-size: 40px;
+      line-height: 110%; /* 44px */
+    }
+    p {
+      font-size: 18px;
+      line-height: 150%; /* 27px */
+      padding: 20px 0;
+    }
+    .our-team__cotent__images {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

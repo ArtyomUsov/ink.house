@@ -1,4 +1,44 @@
-section.call-to-action img.call-to-action__background {
+section.call-to-action {
   position: relative;
-  left: -165px;
+}
+section.call-to-action .call-to-action__background {
+  -o-object-fit: cover;
+     object-fit: cover;
+  mix-blend-mode: hard-light;
+  opacity: 0.7;
+}
+section.call-to-action .call-to-action__content {
+  position: absolute;
+  top: 0;
+  padding: 70px 735px 70px 165px;
+  color: #f4f6f5;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), color-stop(80%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 80%);
+}
+section.call-to-action .call-to-action__content img {
+  position: absolute;
+}
+section.call-to-action .call-to-action__content .call-to-action__title {
+  font-size: 40px;
+  line-height: 100%;
+  /* 40px */
+  padding-left: 100px;
+}
+section.call-to-action .call-to-action__content p {
+  padding: 20px 0 60px;
+  font-size: 18px;
+  line-height: 150%;
+  /* 27px */
+}
+section.call-to-action .call-to-action__content button {
+  padding: 20px 60px;
+  background: #eedb6d;
+  color: #2c2d35;
+}
+section.call-to-action .call-to-action__content button:focus {
+  border: 1px solid #a38314;
+  background: #faeb97;
+}
+section.call-to-action .call-to-action__content button:hover {
+  background: #faeb97;
 }
