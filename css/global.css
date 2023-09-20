@@ -18,13 +18,3 @@ body {
   margin: 0 auto;
   max-width: 1440px;
 }
-body main {
-  background-color: white;
-  width: 1440px;
-  padding: 0 165px;
-}
-body footer {
-  background-color: white;
-  width: 1440px;
-  padding: 0 165px;
-}

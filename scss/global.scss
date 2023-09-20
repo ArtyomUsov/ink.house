@@ -1,6 +1,3 @@
-$row-padding-1440: 0 165px;
-$color-light-grey: #8491a0;
-
 * {
   margin: 0;
   padding: 0;
@@ -15,19 +12,7 @@ $color-light-grey: #8491a0;
   text-decoration: none;
 }
 body {
-  background-color: $color-light-grey;
+  background-color: #8491a0;
   margin: 0 auto;
   max-width: 1440px;
-
-  main {
-    background-color: white;
-    width: 1440px;
-    padding: $row-padding-1440;
-  }
-
-  footer {
-    background-color: white;
-    width: 1440px;
-    padding: $row-padding-1440;
-  }
 }

@@ -1,5 +1,6 @@
 .gallery {
-  padding: 70px 0;
+  background-color: #F4F6F5;
+  padding: 70px 165px;
 }
 .gallery .gallery__navigation {
   padding-bottom: 30px;
