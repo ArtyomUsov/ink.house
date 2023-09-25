@@ -1,15 +1,18 @@
 footer {
-  padding: 29px 165px 23px;
+  padding: 29px calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px)) 23px;
   background: #e1ede6;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  grid-template-areas: "main center center info";
+  max-width: 1440px;
+}
+footer hr {
+  display: none;
+  border: none;
+  border-top: 1px solid #c3d1c6;
+  margin: 16px 0;
 }
 footer div > h3 {
   color: #2c2d35;
@@ -50,10 +53,112 @@ footer .row .row__messenger {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .row_main {
+  grid-area: main;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 footer .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
+  grid-area: center;
+}
+footer .center .row__tel {
+  display: none;
+}
+footer .row_info {
+  grid-area: info;
+}
+footer .row_countries {
+  grid-area: countries;
+}
+footer .row_year {
+  grid-area: year;
+}
+footer .row_sections {
+  grid-area: sections;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    grid-template-areas: "main main main main" "center center center info";
+  }
+  footer .row_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 29px calc(33px + 6 * ((100vw - 510px) / (768 - 510))) 23px;
+  }
+}
+@media screen and (max-width: 650px) {
+  footer {
+    grid-template-areas: "main main main" "center center center" "info info info";
+  }
+  footer div > a {
+    font-size: 16px;
+  }
+  footer .center {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer hr {
+    display: block;
+  }
+  footer .row_info {
+    text-align: center;
+  }
+  footer .row_info p {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+@media screen and (max-width: 550px) {
+  footer {
+    padding: 23px 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer {
+    grid-template-areas: "main center" "center center";
+    position: relative;
+  }
+  footer hr {
+    margin-bottom: 20px;
+  }
+  footer .row__tel h3 {
+    font-size: 16px;
+  }
+  footer .row_main {
+    display: block;
+  }
+  footer .row_main .row__tel {
+    display: none;
+  }
+  footer .row_main .row__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  footer .center {
+    gap: 20px;
+    display: grid;
+    grid-template-areas: "main countries" "year sections" "info info";
+  }
+  footer .center .row__tel {
+    display: block;
+  }
 }

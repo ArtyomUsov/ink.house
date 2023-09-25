@@ -1,12 +1,23 @@
 .title-screen {
-  display: inline-grid;
-  grid-template-columns: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #F4F6F5;
-  padding: 0 165px;
+  background-color: #f4f6f5;
+  padding: 0 calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+}
+.title-screen .title-screen__image {
+  height: calc(min(239px + 382 * ((100vw - 576px) / (1440 - 576)), 621px));
+  min-width: 195px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/bird.png");
+}
+.title-screen .title-screen__title-content {
+  min-width: 285px;
 }
 .title-screen .title-screen__title-content h1,
 .title-screen .title-screen__title-content .green-title {
@@ -22,11 +33,21 @@
   color: #86928b;
   font-size: 18px;
   line-height: 150%;
+  /* 27px */
   padding: 20px 0 60px;
 }
 .title-screen .title-screen__title-content button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: 1px solid #598d66;
   padding: 20px 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .title-screen .title-screen__title-content button a {
   color: #598d66;
@@ -39,4 +60,54 @@
 }
 .title-screen .title-screen__title-content button:hover a {
   color: #f4f6f5;
+}
+
+@media screen and (max-width: 768px) {
+  .title-screen {
+    padding: 50px calc(33px + 6 * ((100vw - 510px) / (768 - 510))) 0;
+  }
+  .title-screen .title-screen__title-content h1,
+  .title-screen .title-screen__title-content .green-title {
+    font-size: 40px;
+    line-height: 100%;
+    /* 40px */
+  }
+  .title-screen .title-screen__title-content p {
+    color: #86928b;
+    font-size: 18px;
+    line-height: 150%;
+    padding: 20px 0 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title-screen .title-screen__title-content h1,
+  .title-screen .title-screen__title-content .green-title {
+    font-size: 36px;
+  }
+  .title-screen .title-screen__title-content p {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  .title-screen .title-screen__title-content button {
+    max-width: 178px;
+    max-height: 50px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .title-screen {
+    display: block;
+    padding: 60px 15px 0;
+  }
+  .title-screen .title-screen__image {
+    display: none;
+  }
+  .title-screen .title-screen__title-content h1,
+  .title-screen .title-screen__title-content .green-title {
+    font-size: 30px;
+  }
+  .title-screen .title-screen__title-content p {
+    font-size: 14px;
+    padding: 20px 0 40px;
+  }
 }

@@ -24,7 +24,12 @@
         <img src="icons/logo-green.png" alt="logo" />
         <h2>Ink. House</h2>
       </div>
+      <hr />
       <nav>
+        <button class="button_icon">
+          <img src="icons/menu.png" alt="menu" />
+          <a href="http://"></a>
+        </button>
         <button>
           <a href="#Reproductions">Репродукции</a>
         </button>
@@ -34,7 +39,7 @@
         <button>
           <a href="#our-team">О нас</a>
         </button>
-        <button>
+        <button class="button_icon">
           <img src="icons/shopping-cart.png" alt="cart" />
           <a href="http://"></a>
         </button>
@@ -42,7 +47,7 @@
     </header>
     <main>
       <section class="title-screen">
-        <img src="img/bird.png" alt="bird" />
+        <div class="title-screen__image"></div>
         <div class="title-screen__title-content">
           <h1>Реплики картин от <span class="green-title">Ink. House</span></h1>
           <p>
@@ -324,16 +329,11 @@
         </div>
       </section>
       <section class="call-to-action" id="New items">
-        <img
-          class="call-to-action__background"
-          src="img/David playing the harp.png"
-          alt="David playing the harp"
-        />
         <div class="call-to-action__content">
-          <img src="icons/logo-yellow.png" alt="logo-yellow" />
-          <h3 class="call-to-action__title">
-            Новая коллекция французских авторов
-          </h3>
+          <div class="call-to-action__title">
+            <img src="icons/logo-yellow.png" alt="logo-yellow" />
+            <h3>Новая коллекция французских авторов</h3>
+          </div>
           <p>
             Сложно сказать, почему акционеры крупнейших компаний призывают нас к
             новым свершениям, которые, в свою очередь, должны быть заблокированы
@@ -350,11 +350,21 @@
           <img
             class="our-team__applique__frame"
             src="img/frame.png"
-            alt="frame"
+            alt="handle"
+          />
+          <img
+            class="our-team__applique__frame_mobile"
+            src="img/frame mobile.png"
+            alt="handle"
           />
           <img
             class="our-team__applique__handle"
             src="img/handle.png"
+            alt="handle"
+          />
+          <img
+            class="our-team__applique__handle_mobile"
+            src="img/handle mobile.png"
             alt="handle"
           />
         </div>
@@ -375,33 +385,40 @@
       </section>
     </main>
     <footer>
-      <div class="row">
+      <div class="row row_main">
         <div class="row__logo">
           <img src="icons/logo-green.png" alt="logo" />
           <h2>Ink. House</h2>
         </div>
-        <h3 class="row__tel" href="tel:+79995435454">+7 (999) 543-54-54</h3>
-        <a href="http://">Мастерская</a>
+        <div class="row__tel">
+          <h3 href="tel:+79995435454">+7 (999) 543-54-54</h3>
+          <a href="http://">Мастерская</a>
+        </div>
       </div>
       <div class="center">
-        <div class="row">
+        <div class="row__tel">
+          <h3 href="tel:+79995435454">+7 (999) 543-54-54</h3>
+          <a href="http://">Мастерская</a>
+        </div>
+        <div class="row row_countries">
           <h3>Репродукции</h3>
           <a href="http://">Франция</a>
           <a href="http://">Германия</a>
           <a href="http://">Англия</a>
         </div>
-        <div class="row">
+        <div class="row row_year">
           <h3>Новинки</h3>
           <a href="http://">2021</a>
           <a href="http://">2020</a>
         </div>
-        <div class="row">
+        <div class="row row_sections">
           <h3>О нас</h3>
           <a href="http://">Художники</a>
           <a href="http://">Менеджеры</a>
         </div>
       </div>
-      <div class="row">
+      <div class="row row_info">
+        <hr>
         <div class="row__messenger">
           <img src="icons/facebook.png" alt="facebook" />
           <img src="icons/instagram.png" alt="instagram" />

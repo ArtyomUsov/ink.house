@@ -1,6 +1,9 @@
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
+
 .gallery {
-  background-color: #F4F6F5;
-  padding: 70px 165px;
+  background-color: #f4f6f5;
+  padding: 70px $row-padding;
 
   .gallery__navigation {
     padding-bottom: 30px;
@@ -38,17 +41,22 @@
   }
   .gallery__items {
     font-size: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    display: flex;
     gap: 30px;
+    justify-content: center;
 
     .gallery__items__item {
+      position: relative;
       background: #e1ede6;
       padding: 20px 20px 30px;
       text-align: left;
+      width: calc(100% / 3 - 20px);
 
       .gallery__items__item__img {
+        object-fit: contain;
         padding-bottom: 20px;
+        width: 100%;
       }
       .gallery__items__item__autor {
         font-size: 18px;
@@ -74,9 +82,14 @@
         border: 1px solid #598d66;
         padding: 20px 60px;
         color: #598d66;
+        display: flex;
+        white-space: nowrap;
+        max-width: calc(100% - 20px);
+        height: 50px;
         margin: 0 auto;
-        display: block;
         text-align: center;
+        justify-content: center;
+        align-items: center;
       }
       button:focus {
         background: #d4e8d9;
@@ -92,4 +105,60 @@
   #content3 {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    padding: 70px $row-padding-mobile;
+
+    .gallery__navigation {
+      .gallery__navigation__title {
+        font-size: 30px;
+      }
+    }
+    .gallery__items {
+      .gallery__items__item {
+        width: calc(100% / 2 - 20px);
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .gallery {
+    .gallery__navigation {
+      display: block;
+
+      .gallery__navigation__title {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery {
+    padding: 50px $row-padding-mobile;
+  }
+}
+@media screen and (max-width: 550px) {
+  .gallery {
+    padding: 60px 15px;
+
+    .gallery__navigation {
+      overflow: hidden;
+
+      .gallery__navigation__title {
+        font-size: 30px;
+      }
+    }
+    .gallery__items {
+      .gallery__items__item {
+        width: calc(100% - 20px);
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .gallery__items {
+    .gallery__items__item {
+      .gallery__items__item__img {
+      }}}
 }

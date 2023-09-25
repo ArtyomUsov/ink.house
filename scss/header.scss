@@ -1,14 +1,16 @@
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
+
 header {
   align-items: center;
   display: flex;
-  height: 100px;
-  padding: 33px 165px 32px 165px;
+  padding: 33px $row-padding 32px;
   justify-content: space-between;
   width: 100%;
   max-width: 1440px;
   background: #e1ede6;
 
-  div.logo {
+  .logo {
     display: flex;
     height: 35px;
     align-items: center;
@@ -19,9 +21,14 @@ header {
       font-weight: 700;
     }
   }
+  hr {
+    display: none;
+    border: none;
+    border-top: 1px solid #c3d1c6;
+    margin: 16px 0;
+  }
   nav {
     display: flex;
-    align-items: flex-start;
     gap: 60px;
 
     button {
@@ -41,14 +48,70 @@ header {
     button:focus {
       background: white;
       a {
-        color: #2C2D35;
+        color: #2c2d35;
       }
     }
     button:hover {
       background: white;
 
       a {
-        color: #598D66;
+        color: #598d66;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 33px $row-padding-mobile 32px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    display: block;
+    padding: 16px $row-padding-mobile 16px;
+
+    .logo {
+      justify-content: center;
+    }
+
+    button:last-of-type {
+      margin-left: auto;
+    }
+
+    hr {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  header {
+    nav {
+      button {
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    padding: 0;
+
+    .logo {
+      height: 68px;
+      background: #FFF;
+    }
+    hr {
+      display: none;
+    }
+    nav {
+      padding: 16px 15px;
+      button {
+        display: none;
+      }
+      .button_icon {
+        display: block;
       }
     }
   }

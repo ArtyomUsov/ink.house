@@ -1,10 +1,10 @@
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
+
 .our-team {
-  padding: 149px 165px 70px;
-  background-color: #F4F6F5;
-  // position: relative;
-  // display: inline-flex;
-  display: inline-grid;
-  grid-template-columns: 1fr auto;
+  padding: 149px $row-padding 70px;
+  background-color: #f4f6f5;
+  display: flex;
   gap: 30px;
   align-items: center;
 
@@ -13,16 +13,23 @@
 
     .our-team__applique__frame {
       position: relative;
-      //   top: 79px;
-      // bottom: 0;
     }
     .our-team__applique__handle {
       position: absolute;
-      //   position: relative;
-    //   padding-top: 70px;
       left: 48px;
       bottom: 48px;
-    // top: 79px;
+    }
+    .our-team__applique__frame_mobile {
+      display: none;
+      position: relative;
+      width: 303.568px;
+    }
+    .our-team__applique__handle_mobile {
+      display: none;
+      position: absolute;
+      left: 31.28px;
+      bottom: 27.95px;
+      width: 226.685px;
     }
   }
   .our-team__cotent {
@@ -38,6 +45,66 @@
     .our-team__cotent__images {
       display: flex;
       gap: 30px;
+    }
+  }
+}
+@media screen and (max-width: 870px) {
+  .our-team {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our-team {
+    padding: 149px $row-padding-mobile 70px;
+  }
+  .our-team__cotent {
+    padding-top: 40px;
+
+    h3 {
+      font-size: 30px;
+      line-height: 110%; /* 44px */
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .our-team {
+    padding: 149px 15px 94px;
+
+    .our-team__cotent {
+      padding-top: 0;
+
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 140%; /* 27px */
+      }
+    }
+    .our-team__applique {
+      .our-team__applique__frame {
+        display: none;
+      }
+      .our-team__applique__handle {
+        display: none;
+      }
+      .our-team__applique__frame_mobile {
+        display: block;
+      }
+      .our-team__applique__handle_mobile {
+        display: block;
+      }
+    }
+    .our-team__cotent__images {
+      justify-content: space-evenly;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .our-team {
+    .our-team__cotent__images {
+      justify-content: space-between;
     }
   }
 }

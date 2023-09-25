@@ -1,9 +1,20 @@
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
+
 footer {
-  padding: 29px 165px 23px;
+  padding: 29px $row-padding 23px;
   background: #e1ede6;
-  align-items: top;
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  grid-template-areas: "main center center info";
+  max-width: 1440px;
+
+  hr {
+    display: none;
+    border: none;
+    border-top: 1px solid #c3d1c6;
+    margin: 16px 0;
+  }
 
   div > h3 {
     color: #2c2d35;
@@ -38,10 +49,119 @@ footer {
     .row__messenger {
       display: flex;
       gap: 30px;
+      justify-content: center;
     }
+  }
+  .row_main {
+    grid-area: main;
+    justify-content: space-between;
   }
   .center {
     display: flex;
     gap: 60px;
+    grid-area: center;
+
+    .row__tel {
+      display: none;
+    }
+  }
+  .row_info {
+    grid-area: info;
+  }
+  .row_countries {
+    grid-area: countries;
+  }
+  .row_year {
+    grid-area: year;
+  }
+  .row_sections {
+    grid-area: sections;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer {
+    grid-template-areas:
+      "main main main main"
+      "center center center info";
+
+    .row_main {
+      display: flex;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 29px $row-padding-mobile 23px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer {
+    grid-template-areas:
+      "main main main"
+      "center center center"
+      "info info info";
+
+    div > a {
+      font-size: 16px;
+    }
+    .center {
+      justify-content: space-between;
+    }
+    hr {
+      display: block;
+    }
+    .row_info {
+      text-align: center;
+
+      p {
+        display: inline-flex;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  footer {
+    padding: 23px 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer {
+    grid-template-areas:
+      "main center"
+      "center center";
+    position: relative;
+
+    hr {
+      margin-bottom: 20px;
+    }
+    .row__tel {
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .row_main {
+      display: block;
+      
+      .row__tel {
+        display: none;
+      }
+      .row__logo {
+        display: flex;
+        margin-bottom: 20px;
+      }
+    }
+    .center {
+      gap: 20px;
+      display: grid;
+      grid-template-areas:
+        "main countries"
+        "year sections"
+        "info info";
+
+        .row__tel {
+          display: block;
+        }
+    }
   }
 }

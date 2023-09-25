@@ -1,44 +1,102 @@
-section.call-to-action {
-  position: relative;
+.call-to-action {
+  padding: 70px calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../img/David playing the harp.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("../img/David playing the harp.png");
 }
-section.call-to-action .call-to-action__background {
-  -o-object-fit: cover;
-     object-fit: cover;
-  mix-blend-mode: hard-light;
-  opacity: 0.7;
-}
-section.call-to-action .call-to-action__content {
-  position: absolute;
-  top: 0;
-  padding: 70px 735px 70px 165px;
+.call-to-action .call-to-action__content {
   color: #f4f6f5;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), color-stop(80%, rgba(0, 0, 0, 0)));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 80%);
+  max-width: 540px;
 }
-section.call-to-action .call-to-action__content img {
-  position: absolute;
+.call-to-action .call-to-action__content .call-to-action__title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-section.call-to-action .call-to-action__content .call-to-action__title {
+.call-to-action .call-to-action__content .call-to-action__title h3 {
   font-size: 40px;
   line-height: 100%;
   /* 40px */
-  padding-left: 100px;
+  padding: 0 20px;
 }
-section.call-to-action .call-to-action__content p {
+.call-to-action .call-to-action__content .call-to-action__title img {
+  max-height: 80px;
+}
+.call-to-action .call-to-action__content p {
   padding: 20px 0 60px;
   font-size: 18px;
   line-height: 150%;
   /* 27px */
 }
-section.call-to-action .call-to-action__content button {
+.call-to-action .call-to-action__content button {
   padding: 20px 60px;
   background: #eedb6d;
   color: #2c2d35;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
 }
-section.call-to-action .call-to-action__content button:focus {
+.call-to-action .call-to-action__content button:focus {
   border: 1px solid #a38314;
   background: #faeb97;
 }
-section.call-to-action .call-to-action__content button:hover {
+.call-to-action .call-to-action__content button:hover {
   background: #faeb97;
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-action {
+    padding: 70px calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
+    grid-template-columns: 1fr;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.4))), url("../img/David playing the harp 768.png");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/David playing the harp 768.png");
+  }
+  .call-to-action .call-to-action__content {
+    max-width: 690px;
+  }
+  .call-to-action .call-to-action__content .call-to-action__title {
+    max-width: 450px;
+  }
+  .call-to-action .call-to-action__content .call-to-action__title img {
+    max-height: 60px;
+  }
+  .call-to-action .call-to-action__content .call-to-action__title h3 {
+    padding-left: 10px;
+    font-size: 30px;
+  }
+  .call-to-action .call-to-action__content p {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .call-to-action {
+    padding: 50px 15px 51px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .call-to-action .call-to-action__content .call-to-action__title img {
+    max-height: 50px;
+  }
+  .call-to-action .call-to-action__content .call-to-action__title h3 {
+    font-size: 24px;
+  }
+  .call-to-action .call-to-action__content p {
+    font-size: 16px;
+    line-height: 140%;
+    /* 22.4px */
+  }
+  .call-to-action .call-to-action__content button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }

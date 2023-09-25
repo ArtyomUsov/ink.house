@@ -5,8 +5,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
-  padding: 33px 165px 32px 165px;
+  padding: 33px calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px)) 32px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -14,7 +13,7 @@ header {
   max-width: 1440px;
   background: #e1ede6;
 }
-header div.logo {
+header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,16 +24,19 @@ header div.logo {
   gap: 8px;
   color: #598d66;
 }
-header div.logo h2 {
+header .logo h2 {
   font-weight: 700;
+}
+header hr {
+  display: none;
+  border: none;
+  border-top: 1px solid #c3d1c6;
+  margin: 16px 0;
 }
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 60px;
 }
 header nav button a {
@@ -59,11 +61,60 @@ header nav button:focus {
   background: white;
 }
 header nav button:focus a {
-  color: #2C2D35;
+  color: #2c2d35;
 }
 header nav button:hover {
   background: white;
 }
 header nav button:hover a {
-  color: #598D66;
+  color: #598d66;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 33px calc(33px + 6 * ((100vw - 510px) / (768 - 510))) 32px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    display: block;
+    padding: 16px calc(33px + 6 * ((100vw - 510px) / (768 - 510))) 16px;
+  }
+  header .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header button:last-of-type {
+    margin-left: auto;
+  }
+  header hr {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  header nav button a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  header {
+    padding: 0;
+  }
+  header .logo {
+    height: 68px;
+    background: #FFF;
+  }
+  header hr {
+    display: none;
+  }
+  header nav {
+    padding: 16px 15px;
+  }
+  header nav button {
+    display: none;
+  }
+  header nav .button_icon {
+    display: block;
+  }
 }

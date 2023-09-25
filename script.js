@@ -4,7 +4,7 @@ function showContent(contentId) {
   );
   for (var i = 0; i < contentElements.length; i++) {
     if (contentElements[i].id === contentId) {
-      contentElements[i].style.display = "grid";
+      contentElements[i].style.display = "flex";
     } else {
       contentElements[i].style.display = "none";
     }

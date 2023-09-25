@@ -1,26 +1,33 @@
-section.call-to-action {
-  position: relative;
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
 
-  .call-to-action__background {
-    object-fit: cover;
-    mix-blend-mode: hard-light;
-    opacity: 0.7;
-  }
+.call-to-action {
+  padding: 70px $row-padding;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../img/David playing the harp.png");
+
   .call-to-action__content {
-    position: absolute;
-    top: 0;
-    padding: 70px 735px 70px 165px;
     color: #f4f6f5;
-    // background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 80%);
+    max-width: 540px;
 
-    img {
-      position: absolute;
-    }
     .call-to-action__title {
-      font-size: 40px;
-      line-height: 100%; /* 40px */
-      padding-left: 100px;
+      display: inline-flex;
+      align-items: center;
+
+      h3 {
+        font-size: 40px;
+        line-height: 100%; /* 40px */
+        padding: 0 20px;
+      }
+
+      img {
+        max-height: 80px;
+      }
     }
     p {
       padding: 20px 0 60px;
@@ -31,6 +38,11 @@ section.call-to-action {
       padding: 20px 60px;
       background: #eedb6d;
       color: #2c2d35;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
     }
     button:focus {
       border: 1px solid #a38314;
@@ -38,6 +50,63 @@ section.call-to-action {
     }
     button:hover {
       background: #faeb97;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .call-to-action {
+    padding: 70px $row-padding-mobile;
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("../img/David playing the harp 768.png");
+
+    .call-to-action__content {
+      max-width: 690px;
+
+      .call-to-action__title {
+        max-width: 450px;
+
+        img {
+          max-height: 60px;
+        }
+        h3 {
+          padding-left: 10px;
+          font-size: 30px;
+        }
+      }
+      p {
+        padding: 30px 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .call-to-action {
+    padding: 50px 15px 51px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .call-to-action {
+    .call-to-action__content {
+      .call-to-action__title {
+        img {
+          max-height: 50px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 140%; /* 22.4px */
+      }
+      button {
+        display: flex;
+      }
     }
   }
 }

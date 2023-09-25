@@ -1,14 +1,27 @@
 $color-green: #598d66;
+$row-padding: calc(min(39px + 126 * ((100vw - 768px) / (1440 - 768)), 165px));
+$row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
 
 .title-screen {
-  display: inline-grid;
-  grid-template-columns: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: center;
-  background-color: #F4F6F5;
-  padding: 0 165px;
+  background-color: #f4f6f5;
+  padding: 0 $row-padding;
+
+  .title-screen__image {
+    height: calc(min(239px + 382 * ((100vw - 576px) / (1440 - 576)), 621px));
+    min-width: 195px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/bird.png");
+  }
 
   .title-screen__title-content {
+    min-width: 285px;
+
     h1,
     .green-title {
       font-size: 60px;
@@ -20,12 +33,15 @@ $color-green: #598d66;
     p {
       color: #86928b;
       font-size: 18px;
-      line-height: 150%;
+      line-height: 150%; /* 27px */
       padding: 20px 0 60px;
     }
     button {
+      display: flex;
       border: 1px solid $color-green;
       padding: 20px 60px;
+      justify-content: center;
+      align-items: center;
 
       a {
         color: $color-green;
@@ -39,6 +55,63 @@ $color-green: #598d66;
 
       a {
         color: #f4f6f5;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-screen {
+    padding: 50px $row-padding-mobile 0;
+
+    .title-screen__title-content {
+      h1,
+      .green-title {
+        font-size: 40px;
+        line-height: 100%; /* 40px */
+      }
+      p {
+        color: #86928b;
+        font-size: 18px;
+        line-height: 150%;
+        padding: 20px 0 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .title-screen {
+    .title-screen__title-content {
+      h1,
+      .green-title {
+        font-size: 36px;
+      }
+      p {
+        font-size: 16px;
+        padding: 10px 0;
+      }
+      button {
+        max-width: 178px;
+        max-height: 50px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .title-screen {
+    display: block;
+    padding: 60px 15px 0;
+    .title-screen__image {
+      display: none;
+    }
+    .title-screen__title-content {
+      h1,
+      .green-title {
+        font-size: 30px;
+      }
+      p {
+        font-size: 14px;
+        padding: 20px 0 40px;
       }
     }
   }
