@@ -45,6 +45,9 @@ header {
         align-items: center;
       }
     }
+    button:first-of-type {
+      display: none;
+    }
     button:focus {
       background: white;
       a {
@@ -100,7 +103,7 @@ header {
 
     .logo {
       height: 68px;
-      background: #FFF;
+      background: #fff;
     }
     hr {
       display: none;
@@ -109,6 +112,9 @@ header {
       padding: 16px 15px;
       button {
         display: none;
+      }
+      button:first-of-type {
+        display: block;
       }
       .button_icon {
         display: block;

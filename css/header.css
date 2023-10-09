@@ -57,6 +57,9 @@ header nav button img {
       -ms-flex-align: center;
           align-items: center;
 }
+header nav button:first-of-type {
+  display: none;
+}
 header nav button:focus {
   background: white;
 }
@@ -103,7 +106,7 @@ header nav button:hover a {
   }
   header .logo {
     height: 68px;
-    background: #FFF;
+    background: #fff;
   }
   header hr {
     display: none;
@@ -113,6 +116,9 @@ header nav button:hover a {
   }
   header nav button {
     display: none;
+  }
+  header nav button:first-of-type {
+    display: block;
   }
   header nav .button_icon {
     display: block;
