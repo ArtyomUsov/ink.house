@@ -32,14 +32,14 @@
   /* 27px */
 }
 .call-to-action .call-to-action__content button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 20px 60px;
   background: #eedb6d;
   color: #2c2d35;
   margin: 0 auto;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

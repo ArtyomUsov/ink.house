@@ -35,12 +35,12 @@ $row-padding-mobile: calc(33px + 6 * ((100vw - 510px) / (768 - 510)));
       line-height: 150%; /* 27px */
     }
     button {
+      display: inline-flex;
       padding: 20px 60px;
       background: #eedb6d;
       color: #2c2d35;
       margin: 0 auto;
       text-align: center;
-      justify-content: center;
       align-items: center;
       height: 50px;
     }
